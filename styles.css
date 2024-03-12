@@ -26,7 +26,7 @@ body {
 
 .d {
   text-align: center;
-  color: #ac0505;
+  color: yellowgreen;
 
 }
 
@@ -41,6 +41,7 @@ button {
   background-color: #4ECCA3;
   color: white;
   text-shadow: #393E46;
+  margin-bottom: 3rem;
 }
 
 button:hover {
@@ -58,6 +59,11 @@ h1 {
   text-shadow: 5px 0 #232931;
   font-size: 8rem;
   color: #4ECCA3;
+}
+
+.images-block {
+  display: flex;
+  justify-content: space-around
 }
 
 h2 {
@@ -82,4 +88,71 @@ footer {
   text-align: center;
   font-family: 'Indie Flower', cursive;
 
+}
+
+
+#myButton {
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 20px;
+  cursor: pointer;
+  /*transition: background-color 0.3s ease; /* Adding transition for smooth animation */
+}
+
+/* Animation class */
+.animated {
+  animation: shake 0.5s;
+  /* Example animation */
+}
+
+.animated2 {
+  animation: shak 0.5s;
+  /* Example animation */
+}
+
+@keyframes shak {
+  0% {
+    transform: translateX(0);
+  }
+
+  5% {
+    transform: translateX(40px);
+  }
+
+  50% {
+    transform: translateX(-40px);
+  }
+
+  75% {
+    transform: translateX(30px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-40px);
+  }
+
+  50% {
+    transform: translateX(40px);
+  }
+
+  75% {
+    transform: translateX(-30px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
 }
