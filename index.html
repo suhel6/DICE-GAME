@@ -23,12 +23,12 @@
       <div class="images-block">
       <div class="dice">
         <p>Player 1</p>
-        <img class="img1 "  id="m" src="./images/dice6.png" />
+        <img class="img1 "  id="m" src="./dice6.png" />
       </div>
 
       <div class="dice">
         <p>Player 2</p>
-        <img class="img2 " id="n" src="./images/dice6.png" />
+        <img class="img2 " id="n" src="./dice6.png" />
       </div>
       </div>
     </div>
@@ -45,8 +45,8 @@
 
   var pic1=Math.floor(Math.random()*6)+1;
   var pic2=Math.floor(Math.random()*6)+1;
-  document.querySelector(".img1").setAttribute("src", "./images/dice"+pic1+".png");
-  document.querySelector(".img2").setAttribute("src", "./images/dice"+pic2+".png");
+  document.querySelector(".img1").setAttribute("src", "./dice"+pic1+".png");
+  document.querySelector(".img2").setAttribute("src", "./dice"+pic2+".png");
   if(pic1>pic2){
     document.querySelector(".one").innerHTML=  " 🚩player 1 wins";
   }
