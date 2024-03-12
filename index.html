@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -11,20 +12,24 @@
   </head>
   <body>
     <div class="container">
-      <h1>WHO WINS </h1>
+      <h1 class="animated">WHO WINS </h1>
       
-      <div class="bttn"><button>play</button></div>
+      <div class="bttn">
+        <button id="myButton" onclick=" ima1('m');   ima2('n'); fn();">PLAY</button>
+      </div>       
       <h2 class="one"></h2>
       <h2 class="two"></h2>
       <h2 class="d"></h2>
+      <div class="images-block">
       <div class="dice">
         <p>Player 1</p>
-        <img class="img1" src="./dice6.png" />
+        <img class="img1 "  id="m" src="./images/dice6.png" />
       </div>
 
       <div class="dice">
         <p>Player 2</p>
-        <img class="img2" src="./dice6.png" />
+        <img class="img2 " id="n" src="./images/dice6.png" />
+      </div>
       </div>
     </div>
 
@@ -33,7 +38,6 @@
 
 <script>
 
-  document.querySelector("button").addEventListener("click", fn);
   function fn(){
     document.querySelector(".one").innerHTML=  "";
     document.querySelector(".two").innerHTML= "";
@@ -41,8 +45,8 @@
 
   var pic1=Math.floor(Math.random()*6)+1;
   var pic2=Math.floor(Math.random()*6)+1;
-  document.querySelector(".img1").setAttribute("src", "./dice"+pic1+".png");
-  document.querySelector(".img2").setAttribute("src", "./dice"+pic2+".png");
+  document.querySelector(".img1").setAttribute("src", "./images/dice"+pic1+".png");
+  document.querySelector(".img2").setAttribute("src", "./images/dice"+pic2+".png");
   if(pic1>pic2){
     document.querySelector(".one").innerHTML=  " 🚩player 1 wins";
   }
@@ -56,6 +60,44 @@
     }
   }
 }
+
+function ima1(index){
+    var b=document.getElementById(index);
+    
+    b.classList.add("animated");
+    setTimeout(function(){
+      b.classList.remove("animated");
+    },500);
+  }
+
+  function ima2(index){
+    var bb=document.getElementById(index);
+    bb.classList.add("animated2");
+    setTimeout(function(){
+      bb.classList.remove("animated2");
+    },500);
+  }
+
+function animateButton() {
+  var button = document.getElementById("myButton");
+  button.classList.add("animated"); // Adding the animation class
+
+  setTimeout(function() {
+    button.classList.remove("animated"); // Removing the animation class after a delay
+  }, 500); // Adjust the delay to match the duration of your animation
+
+
+ 
+
+
+}
+
+
+
+
+
+
+
 </script>
 
 
