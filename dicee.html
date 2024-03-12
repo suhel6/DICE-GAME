@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Dicee</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>WHO WINS </h1>
+      
+      <div class="bttn"><button>play</button></div>
+      <h2 class="one"></h2>
+      <h2 class="two"></h2>
+      <h2 class="d"></h2>
+      <div class="dice">
+        <p>Player 1</p>
+        <img class="img1" src="./images/dice6.png" />
+      </div>
+
+      <div class="dice">
+        <p>Player 2</p>
+        <img class="img2" src="./images/dice6.png" />
+      </div>
+    </div>
+
+    <footer> 🎲 THE DICE GAME 🎲 </footer>
+    
+
+<script>
+
+  document.querySelector("button").addEventListener("click", fn);
+  function fn(){
+    document.querySelector(".one").innerHTML=  "";
+    document.querySelector(".two").innerHTML= "";
+    document.querySelector(".d").innerHTML=  "";
+
+  var pic1=Math.floor(Math.random()*6)+1;
+  var pic2=Math.floor(Math.random()*6)+1;
+  document.querySelector(".img1").setAttribute("src", "./images/dice"+pic1+".png");
+  document.querySelector(".img2").setAttribute("src", "./images/dice"+pic2+".png");
+  if(pic1>pic2){
+    document.querySelector(".one").innerHTML=  " 🚩player 1 wins";
+  }
+  
+  else{
+    if(pic1<pic2){
+      document.querySelector(".two").innerText=" 🚩player 2 wins";
+    }
+    else{
+      document.querySelector(".d").innerText="DRAW";
+    }
+  }
+}
+</script>
+
+
+
+
+
+  </body>
+</html>
